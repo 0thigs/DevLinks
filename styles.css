@@ -40,7 +40,7 @@ ul {
   padding: 24px;
 }
 
-a {
+ul a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,7 +55,28 @@ a {
     transition: all 0.5s;
 }
 
-a:hover {
+ul a:hover {
     border: 1.5px solid var(--text-color-dark-mode, #FFF);
     background: var(--surface-color-dark-mode-hover, rgba(255, 255, 255, 0.05)); 
+}
+
+#icons {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+#icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+#icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
