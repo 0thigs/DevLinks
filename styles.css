@@ -15,6 +15,8 @@
     --surface-color-hover: rgba(255, 255, 255, 0.05);
     --icon-surface-color-hover: rgba(255, 255, 255, 0.2);
     --bg-switch-button: url("/Assets/MoonStars.svg");
+    --button-position: 60%;
+    --button-animation: Sun;
 }
 
 .light {
@@ -26,6 +28,8 @@
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --icon-surface-color-hover: rgba(0, 0, 0, 0.1);
     --bg-switch-button: url("/Assets/Sun.svg");
+    --button-position: -10%;
+    --button-animation: Moon;
 }
 
 body {
@@ -71,11 +75,8 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 60%;
-}
-
-.light .switch button {
-  left: -10%;
+  left: var(--button-position);
+  animation: .3s linear var(--button-animation);
 }
 
 .switch span { 
@@ -149,4 +150,24 @@ footer {
 #name-link {
     font-weight: 500;
     text-decoration: none;
+}
+
+@keyframes Sun {
+  from {
+    left: -10%
+  }
+
+  to {
+    left: 60%
+  }
+}
+
+@keyframes Moon {
+  from {
+    left: 60%
+  }
+
+  to {
+    left: -10%
+  }
 }
