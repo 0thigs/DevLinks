@@ -34,6 +34,7 @@
 
 body {
     background: var(--background-image) no-repeat center top/cover;
+    height: 100vh;
 }
 
 #container {
@@ -170,5 +171,15 @@ footer {
 
   to {
     left: -10%
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --background-image: url('/Assets/bg-desktop.jpg');
+  }
+
+  .light {
+    --background-image: url('/Assets/bg-desktop-light.jpg')
   }
 }
